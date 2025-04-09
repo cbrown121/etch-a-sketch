@@ -14,8 +14,16 @@ function createGrid(number) {
             const gridItem = document.createElement("div");
             gridItem.classList.add("grid-item");
             container.appendChild(gridItem);
+            gridItem.addEventListener("mouseover", changeColor);
         }
     }
+
+    function changeColor(event) {
+        event.target.style.backgroundColor = "blue";
+    }
 }
+
+
+
 
 createGrid(16);
